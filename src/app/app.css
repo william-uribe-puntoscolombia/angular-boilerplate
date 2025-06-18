@@ -1,0 +1,46 @@
+header {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0rem 1rem;
+  box-shadow: var(--shadow);
+  top: 0;
+  z-index: 100;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  margin: 0px;
+}
+
+header a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+header a:hover {
+  background-color: rgba(10, 42, 13, 0.2);
+}
+
+.tag-login {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin: 0px 0px 1rem 0px;
+  text-align: center;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+}
