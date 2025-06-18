@@ -8,8 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "test": "ng test",
-    "test:cov": "CHROME_BIN=chromium ng test --code-coverage"
+    "test": "ng test --browsers=ChromeHeadless",
+    "test:nowatch": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
+    "test:cov": "ng test --code-coverage  --browsers=ChromeHeadless",
+    "test:cov:nowatch": "ng test --no-watch --code-coverage  --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {
