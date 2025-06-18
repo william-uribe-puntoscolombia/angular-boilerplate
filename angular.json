@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pco-boilerplate": {
+    "boilerplate": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -52,10 +52,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "pco-boilerplate:build:production"
+              "buildTarget": "boilerplate:build:production"
             },
             "development": {
-              "buildTarget": "pco-boilerplate:build:development"
+              "buildTarget": "boilerplate:build:development"
             }
           },
           "defaultConfiguration": "development"

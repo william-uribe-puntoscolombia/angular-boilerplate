@@ -5,7 +5,7 @@
   //   "titleBar.inactiveBackground": "#2ea29798",
   //   "titleBar.inactiveForeground": "#ffffff"
   // },
-  "window.title": "✦ PCO - Boilerplate ✦  ${activeEditorMedium}",
+  "window.title": "✦ Boilerplate ✦  ${activeEditorMedium}",
 
   // Pritter default formatter
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -24,9 +24,7 @@
   "files.insertFinalNewline": true,
 
   // Extension css variables, Help variables of PrimeNg
-  "cssVariables.lookupFiles": [
-    "node_modules/@pco-front-assets/styles/_variables.scss"
-  ],
+  "cssVariables.lookupFiles": ["node_modules/@pco-front-assets/styles/_variables.scss"],
 
   // Performance
   "search.exclude": {

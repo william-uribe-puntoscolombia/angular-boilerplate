@@ -9,7 +9,7 @@ import { NgxPermissionsService } from 'ngx-permissions';
   styleUrl: './app.css',
 })
 export class App implements OnInit {
-  protected title = 'pco-boilerplate';
+  protected title = 'boilerplate';
 
   permissions = inject(NgxPermissionsService);
 
