@@ -1,0 +1,18 @@
+// VScode cSpell extension configuration
+{
+  "words": ["Microfrontend", "Microfrontend"],
+  "ignorePaths": [
+    "node_modules",
+    "**/node_modules",
+    "**/node_modules/**",
+    "node_modules/**",
+    "vscode-extension",
+    "dist",
+    "coverage",
+    ".git",
+    "*.dll",
+    "**/*.dll",
+    "README.md",
+    "package.json"
+  ]
+}

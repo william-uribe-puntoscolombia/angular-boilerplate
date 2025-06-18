@@ -1,0 +1,39 @@
+{
+  // "workbench.colorCustomizations": {
+  //   "titleBar.activeBackground": "#2ea297",
+  //   "titleBar.activeForeground": "#ffffff",
+  //   "titleBar.inactiveBackground": "#2ea29798",
+  //   "titleBar.inactiveForeground": "#ffffff"
+  // },
+  "window.title": "✦ PCO - Boilerplate ✦  ${activeEditorMedium}",
+
+  // Pritter default formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+
+  // Intellisense tailwind : this could be the same that styles.scss -> html{font-size:14px}
+  "tailwindCSS.rootFontSize": 16,
+
+  // Use default LF, for OS Windows and Mac end line.
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // Extension css variables, Help variables of PrimeNg
+  "cssVariables.lookupFiles": [
+    "node_modules/@pco-front-assets/styles/_variables.scss"
+  ],
+
+  // Performance
+  "search.exclude": {
+    "**/dist": true,
+    "**/*.log": true,
+    "**/*.pid": true,
+    "**/.git": true,
+    "**/node_modules": true
+  }
+}
