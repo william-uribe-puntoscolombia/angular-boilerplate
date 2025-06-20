@@ -3,6 +3,12 @@
     <li><a routerLink="/">Home</a></li>
     <li><a routerLink="users">Usuarios</a></li>
   </ul>
+
+  <div>
+    <span class="notification" tabindex="0" (click)="addNotification()" (keydown)="addNotification()">
+      {{ store.notificationCount() }}
+    </span>
+  </div>
 </header>
 
 <main>

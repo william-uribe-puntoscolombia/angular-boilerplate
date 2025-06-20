@@ -25,6 +25,11 @@
           },
           "configurations": {
             "production": {
+              "extractLicenses": true,
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -36,13 +41,33 @@
                   "maximumWarning": "4kB",
                   "maximumError": "8kB"
                 }
-              ],
-              "outputHashing": "all"
+              ]
             },
             "development": {
-              "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "optimization": false,
+              "outputHashing": "none",
+              "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
+            },
+            "staging": {
+              "extractLicenses": true,
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -56,6 +81,9 @@
             },
             "development": {
               "buildTarget": "boilerplate:build:development"
+            },
+            "staging": {
+              "buildTarget": "boilerplate:build:staging"
             }
           },
           "defaultConfiguration": "development"
