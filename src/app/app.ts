@@ -15,15 +15,20 @@ import { Notification } from './core/store/global.store.model';
 export class App implements OnInit {
   protected title = 'boilerplate';
 
-  permissions = inject(NgxPermissionsService);
+  readonly permissions = inject(NgxPermissionsService);
 
   readonly store = inject(GlobalStore);
 
   ngOnInit(): void {
+    this.setUserPermissions();
+  }
+
+  setUserPermissions() {
     const roles = ['user:list', 'user:create', 'user:update', 'user:delete'];
 
     this.permissions.loadPermissions(roles);
-    console.log('Permissions:', this.permissions.getPermissions());
+
+    // console.log('Permissions:', this.permissions.getPermissions());
   }
 
   /**
