@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { NgxPermissionsModule } from 'ngx-permissions';
 
 import { App } from './app';
-import { Notification } from './core/store/global';
+import { Notification } from './core/store/global.store.model';
 
 describe('App', () => {
   beforeEach(async () => {

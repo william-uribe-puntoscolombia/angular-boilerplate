@@ -2,10 +2,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { NgxPermissionsService } from 'ngx-permissions';
 
-import { GlobalStore, Notification } from './core/store/global';
+import { GlobalStore } from './core/store/global.store';
+import { Notification } from './core/store/global.store.model';
 
 @Component({
-  selector: 'app-root',
+  selector: 'pco-root',
   imports: [RouterOutlet, RouterLink],
   providers: [GlobalStore],
   templateUrl: './app.html',

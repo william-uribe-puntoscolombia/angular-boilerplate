@@ -65,10 +65,14 @@ Utilizamos NgRx Signals. En `src/app/core/store/global.ts` se maneja el estado g
 Puedes tomar como referente `src/app/core/store/global.ts` para crear un estado de componente (si es necesario).
 NgRx
 
-¿Cómo funciona el debug?
+### ¿Cómo funciona el debug?
 
 - [Documentación.](https://ngrx-toolkit.angulararchitects.io/docs/with-devtools#disabling-devtools-in-production)
 - [Extensión de Chrome.](https://chromewebstore.google.com/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+
+### ¿Cómo persistir datos?
+
+La persistencia de datos en el browser debe contener el prefijo "pco-[NOMBRE_MICRO]-[STORE]", ejemplo: `pco-shell-global`, hay un ejemplo de como persistir el estado en el store global `src/app/core/store/global.store.ts` ver: `withStorageSync()`.
 
 # Stack tecnologico.
 
@@ -81,12 +85,20 @@ NgRx
 # Pendientes
 
 - Vitest: validar funcionamiento coverage
-- Peer dependencies
+- Eliminar Peer dependencies requeridas, requeridas por NgRx. Package.json
 
-```
-# Package.json: Eliminar, que es requerida la version por las tres librerias de NgRx
+```sh
+# Eliminar esta parte:
 "overrides": {
   "@angular/core": "20.0.4",
   "@angular/common": "20.0.4"
 },
 ```
+
+- ..
+
+# Check list nuevo micro
+
+- Instalar extensiones
+- Iniciar husky `bun husky`
+- Cambiar los selectores dependiendo del micro, eje: `prefix: 'shell',` -> `prefix: 'users',` en el `eslint.config.js`

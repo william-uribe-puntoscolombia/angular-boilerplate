@@ -12,8 +12,8 @@ header {
 }
 
 .notification {
-  background-color: rgb(140, 0, 255);
-  color: white;
+  background-color: white;
+  color: #2ea297;
   font-size: 0.75rem;
   font-weight: bold;
   border-radius: 50%;

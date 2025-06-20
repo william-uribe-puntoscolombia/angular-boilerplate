@@ -1,19 +1,19 @@
 // @ts-check
-const eslint = require("@eslint/js");
-const tseslint = require("typescript-eslint");
-const angular = require("angular-eslint");
-const prettierRecommended = require("eslint-plugin-prettier/recommended");
-const simpleImportSort = require("eslint-plugin-simple-import-sort");
+const eslint = require('@eslint/js');
+const tseslint = require('typescript-eslint');
+const angular = require('angular-eslint');
+const prettierRecommended = require('eslint-plugin-prettier/recommended');
+const simpleImportSort = require('eslint-plugin-simple-import-sort');
 
 // Export our config array, which is composed together thanks to the typed utility function from typescript-eslint
 module.exports = tseslint.config(
   {
-    ignores: ["**/node_modules/**", "**/dist/**", "**/coverage/**"],
+    ignores: ['**/node_modules/**', '**/dist/**', '**/coverage/**'],
   },
 
   {
     // Everything in this config object targets our TypeScript files (Components, Directives, Pipes etc)
-    files: ["**/*.ts"],
+    files: ['**/*.ts'],
     extends: [
       // Apply the recommended core rules
       eslint.configs.recommended,
@@ -28,29 +28,29 @@ module.exports = tseslint.config(
     ],
     processor: angular.processInlineTemplates,
     plugins: {
-      "simple-import-sort": simpleImportSort,
+      'simple-import-sort': simpleImportSort,
     },
     rules: {
       // -- Sort Imports --
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
-      "no-duplicate-imports": "error",
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+      'no-duplicate-imports': 'error',
 
       // -- Default angular name html elements --
-      "@angular-eslint/directive-selector": [
-        "error",
+      '@angular-eslint/directive-selector': [
+        'error',
         {
-          type: "attribute",
-          prefix: "app",
-          style: "camelCase",
+          type: 'attribute',
+          prefix: 'pco',
+          style: 'camelCase',
         },
       ],
-      "@angular-eslint/component-selector": [
-        "error",
+      '@angular-eslint/component-selector': [
+        'error',
         {
-          type: "element",
-          prefix: "app",
-          style: "kebab-case",
+          type: 'element',
+          prefix: 'pco',
+          style: 'kebab-case',
         },
       ],
     },
@@ -58,7 +58,7 @@ module.exports = tseslint.config(
   {
     // Everything in this config object targets our HTML files (both external template files,
     // AND inline templates thanks to the processor set in the TypeScript config above)
-    files: ["**/*.html"],
+    files: ['**/*.html'],
     extends: [
       // Apply the recommended Angular template rules
       ...angular.configs.templateRecommended,
@@ -68,5 +68,5 @@ module.exports = tseslint.config(
       prettierRecommended,
     ],
     rules: {},
-  },
+  }
 );
